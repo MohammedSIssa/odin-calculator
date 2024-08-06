@@ -1,0 +1,156 @@
+:root {
+  --buttons-container: #22262c;
+  --delete-button: #f44336;
+  --calculation-container: #23272c;
+  --numbers-operators: #2b2f34;
+  --equals-button: #5b9bf8;
+  --container-width: 314px;
+  --dark-gray: #545454;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, --apple-system, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100svh;
+  background-color: #1c1e22;
+}
+
+button {
+  cursor: pointer;
+}
+
+.calculation-container {
+  width: var(--container-width);
+  height: 140px;
+  background-color: var(--calculation-container);
+  padding: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border: 1px solid var(--dark-gray);
+  border-bottom: none;
+}
+
+.calculation {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--numbers-operators);
+  color: white;
+  font-size: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+button.number {
+  background-color: var(--numbers-operators);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 12px;
+  margin: 3px;
+}
+
+button.number:hover {
+  background-color: #3c4045;
+}
+
+button.operator {
+  background-color: var(--numbers-operators);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 12px;
+  margin: 3px;
+}
+
+button.operator:hover {
+  background-color: #3c4045;
+}
+
+.buttons-container {
+  display: flex;
+  background-color: var(--buttons-container);
+  padding: 20px;
+  max-width: var(--container-width);
+  min-width: var(--container-width);
+  padding-top: 5px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid var(--dark-gray);;
+  border-top: none;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-row > button.number {
+  width: 194px;
+}
+
+.last-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.last-row > button {
+  padding: 16px;
+  margin: 3px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.last-row > button:first-child {
+  background-color: var(--equals-button);
+}
+
+.last-row > button:first-child:hover {
+  background-color: #3479e0;
+}
+
+.last-row > button:last-child {
+  background-color: var(--delete-button);
+}
+
+.last-row > button:last-child:hover {
+  background-color: #d42418;
+}
+
+footer {
+  background-color: var(--buttons-container);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #5b9bf8;
+  text-decoration: underline;
+}
